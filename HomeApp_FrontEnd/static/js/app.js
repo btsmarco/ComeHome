@@ -17,4 +17,5 @@ var ControllerFunc = function($scope, BackgroundPic)
 	console.log('in main controller');
 
 	$scope.images = BackgroundPic.query();
+	$scope.AccountName = "Athansius";
 };
