@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'ComeHome',
     'HomeApp_Rest',
     'rest_framework',
+    'HomeApp_FrontEnd',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

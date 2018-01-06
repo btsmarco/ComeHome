@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+	<head>
+		<meta charset="utf-8">
+		<!-- inculude angular and other plugins -->
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-resource/angular-resource.js"> </script>
+
+		<script src="js/app.js"></script>
+		<script src="js/BackgroundPic.rest.js"></script>
+	</head>
+	<body>
+
+		<div ng-app="ComeHomeFrontendApp" ng-controller="MainCntrl">
+			Hello World
+			<div ng-repeat="image in images">
+				<img src="{{ image.image }}"/>
+				{{ image.image }}
+			</div>
+		</div>
+
+	</body>
+</html>
