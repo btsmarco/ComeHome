@@ -7,10 +7,27 @@
 .logo{
 	color:white;
 	text-align: left;
-	display: block;
 	font-size: 16px;
 	/*text-decoration: underline;*/
 	font-family: 'Damion';
+}
+
+a:link.picPhotographer {
+	color: white;
+	font-family: 'Noto Sans';
+	font-size: 12px;
+}
+
+a:hover.picPhotographer{
+	color: white;
+}
+
+a:visited.picPhotographer {
+	color: white;
+}
+
+a:active.picPhotographer {
+	color: white;
 }
 
 /*
