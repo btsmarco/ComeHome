@@ -4,6 +4,14 @@
 	padding-left: 20px;
 }
 
+.creds {
+	color:white;
+	margin: 26px;
+	font-family: 'Noto Sans';
+	display: block;
+	line-height: 0px;
+}
+
 .logo{
 	color:white;
 	text-align: left;
@@ -12,21 +20,31 @@
 	font-family: 'Damion';
 }
 
-a:link.picPhotographer {
+.icons {
+	font-size: 22px;
+	margin-right: 10px;
+}
+
+a:hover.logo{
+	color: white;
+	text-decoration: underline;
+}
+
+a:link.cmLinks {
 	color: white;
 	font-family: 'Noto Sans';
 	font-size: 12px;
 }
 
-a:hover.picPhotographer{
+a:hover.cmLinks {
 	color: white;
 }
 
-a:visited.picPhotographer {
+a:visited.cmLinks {
 	color: white;
 }
 
-a:active.picPhotographer {
+a:active.cmLinks {
 	color: white;
 }
 

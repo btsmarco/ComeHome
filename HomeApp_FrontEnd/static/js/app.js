@@ -18,4 +18,9 @@ var ControllerFunc = function($scope, BackgroundPic)
 
 	$scope.images = BackgroundPic.query();
 	$scope.AccountName = "Athanasius";
+	$scope.ShowCredits = false;
+	$scope.toggleShowCredits = function() {
+		$scope.ShowCredits = !$scope.ShowCredits;
+		return $scope.ShowCredits;
+	}
 };

@@ -12,8 +12,7 @@
 	<link href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
    <title>ComeHome</title>
 </head>
 <body ng-app="ComeHomeFrontendApp" ng-controller="MainCntrl" background="{{ images[0].image }}">
@@ -24,12 +23,32 @@
 
 				<div class="inner cover">
 					<h2 class="MainFocus">Hello, {{ AccountName }} </h2>
+					<div ng-show="ShowCredits">
+						<span class="creds">Made by Marco Botros in Toronto, Canada with <3</span>
+						<p class="creds">
+							<span>
+								<a class="cmLinks" href="https://www.instagram.com/athanasiusb/?hl=en">
+									<span class="icon-social-instagram icons"></span>
+								</a>
+							</span>
+							<span>
+								<a href="https://www.linkedin.com/in/marcobotros/" class="cmLinks">
+									<span class="icon-social-linkedin icons"></span>
+								</a>
+							</span>
+							<span>
+								<a href="mailto:btsmarco@gmail.com" class="cmLinks">
+									<span class="icon-envelope icons"></span>
+								</a>
+							</span>
+						</p>
+					</div>
 				</div>
 
 				<div class="mastfoot">
-					<div class="inner">
-						<span class="logo">ComeHome</span> .
-						<a href="{{ images[0].originalAddress }}" class="picPhotographer"><span> {{ images[0].Photographer }}</span></a>
+					<div class="inner" >
+						<a ng-click="toggleShowCredits()" class="logo" ><span  >ComeHome</span> </a>.
+						<a href="{{ images[0].originalAddress }}" class="cmLinks"><span> {{ images[0].Photographer }}</span></a>
 					</div>
 				</div>
 			</div>
