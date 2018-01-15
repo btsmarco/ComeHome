@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang='en-US'>
-<head>
-	<meta charset="utf-8">
-	<!-- inculude angular and other plugins -->
-	<script src="node_modules/angular/angular.js"></script>
-	<script src="node_modules/angular-resource/angular-resource.js"> </script>
+	<head>
+		<meta charset="utf-8">
+		<!-- inculude angular and other plugins -->
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-resource/angular-resource.js"> </script>
 
-	<script src="js/app.js"></script>
-	<script src="js/BackgroundPic.rest.js"></script>
-	<link href="css/main.css" rel="stylesheet" type="text/css">
-	<link href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-   <title>ComeHome</title>
-</head>
-<body ng-app="ComeHomeFrontendApp" ng-controller="MainCntrl" background="{{ images[0].image }}">
+		<script src="js/app.js"></script>
+		<script src="js/BackgroundPic.rest.js"></script>
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+	   <title>ComeHome</title>
+	</head>
+	<body ng-app="ComeHomeFrontendApp" ng-controller="MainCntrl" ng-init="count=0" ng-keypress="searchAppear()" background="{{ images[0].image }}">
 
-	<div class="site-wrapper">
-		<div class="site-wrapper-inner">
-			<div class="cover-container">
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
 
-				<div class="inner cover">
-					<h2 class="MainFocus">Hello, {{ AccountName }} </h2>
-					<div ng-show="ShowCredits">
-						<span class="creds">Made by Marco Botros in Toronto, Canada with <3</span>
-						<p class="creds">
-							<span>
-								<a class="cmLinks" href="https://www.instagram.com/athanasiusb/?hl=en">
-									<span class="icon-social-instagram icons"></span>
-								</a>
-							</span>
-							<span>
-								<a href="https://www.linkedin.com/in/marcobotros/" class="cmLinks">
-									<span class="icon-social-linkedin icons"></span>
-								</a>
-							</span>
-							<span>
-								<a href="mailto:btsmarco@gmail.com" class="cmLinks">
-									<span class="icon-envelope icons"></span>
-								</a>
-							</span>
-						</p>
-					</div>
+				<div class="searchBox">
+					<form name="search" ng-submit="searchG()" >
+						<label>
+							<input type="text" ng-hide="count == 0"  ng-focus="count != 0" name="search" id="srch" ng-model="srchquery" ng-trim="false"/>
+						</label>
+					</form>
 				</div>
 
-				<div class="mastfoot">
-					<div class="inner" >
-						<a ng-click="toggleShowCredits()" class="logo" ><span  >ComeHome</span> </a>.
-						<a href="{{ images[0].originalAddress }}" class="cmLinks"><span> {{ images[0].Photographer }}</span></a>
+				<div class="cover-container">
+
+					<div class="inner cover">
+						<h2 class="MainFocus">Hello, {{ AccountName }}</h2>
+
+						<!-- Show Credits -->
+						<div ng-show="ShowCredits">
+							<span class="creds">Made by Marco Botros in Toronto, Canada with <3</span>
+							<p class="creds">
+								<span>
+									<a class="cmLinks" href="https://www.instagram.com/athanasiusb/?hl=en">
+										<span class="icon-social-instagram icons"></span>
+									</a>
+								</span>
+								<span>
+									<a href="https://www.linkedin.com/in/marcobotros/" class="cmLinks">
+										<span class="icon-social-linkedin icons"></span>
+									</a>
+								</span>
+								<span>
+									<a href="mailto:btsmarco@gmail.com" class="cmLinks">
+										<span class="icon-envelope icons"></span>
+									</a>
+								</span>
+							</p>
+						</div>
+					</div>
+
+					<!-- Footer -->
+					<div class="mastfoot">
+						<div class="inner">
+							<a ng-click="toggleShowCredits()" class="logo">
+								<span>ComeHome</span>
+							</a>.
+							<a href="{{ images[0].originalAddress }}" class="cmLinks">
+								<span>{{ images[0].Photographer }}</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>

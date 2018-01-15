@@ -12,15 +12,32 @@ var ConfigurationFunc = function($resourceProvider)
 };
 
 var ControllerFunc = function($scope, BackgroundPic)
-//var ControllerFunc = function($scope)
 {
 	console.log('in main controller');
 
 	$scope.images = BackgroundPic.query();
 	$scope.AccountName = "Athanasius";
 	$scope.ShowCredits = false;
+	 $scope.srchquery = "";
 	$scope.toggleShowCredits = function() {
 		$scope.ShowCredits = !$scope.ShowCredits;
 		return $scope.ShowCredits;
+	}
+
+	$scope.searchG = function() {
+		console.log("https://www.google.ca/search?q=" +  $scope.srchquery);
+		window.location.href="https://www.google.ca/search?q=" +  $scope.srchquery;
+	}
+
+	$scope.searchAppear = function() {
+	   document.getElementById('srch').focus();
+	   if($scope.count > 2)
+	   {
+		   $scope.count = ($scope.srchquery).length;
+		   console.log($scope.count);
+	   }
+	   else {
+	   	$scope.count = $scope.count + 1;
+	   }
 	}
 };

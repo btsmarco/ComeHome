@@ -20,6 +20,25 @@
 	font-family: 'Damion';
 }
 
+.searchBox {
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+#srch{
+    /*background-color: white;/
+	background-color: rgba(0, 0, 0, 0.6);*/
+	background-color: rgba(185, 185, 185, 0.7);
+	font-size: 24px;
+	border: none;
+	border-radius: 8px;
+	width: 350px;
+	font-weight: normal;
+	height: 45px;
+	padding: 7px;
+}
+
 .icons {
 	font-size: 22px;
 	margin-right: 10px;
